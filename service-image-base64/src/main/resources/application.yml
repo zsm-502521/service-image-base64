@@ -1,0 +1,20 @@
+server:
+  port: 8808 #服务端口
+  address: 0.0.0.0
+spring:
+  application:
+    name: service-image-base64 #服务名称
+  datasource:
+    url: jdbc:mysql://39.106.114.242:3306/zsm-car?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true
+    username: fxd
+    password: 123456
+    driverClassName: com.mysql.jdbc.Driver
+    hikari:
+          connection-timeout: 30000
+          idle-timeout: 300000
+          max-lifetime: 300000
+          maximum-pool-size: 50
+          minimum-idle: 10
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.cat.code.*.po
